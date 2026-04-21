@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="fr" style="--rgb-base: 253, 251, 247; --rgb-panel: 255, 255, 255; --rgb-primary: 62, 39, 35; --rgb-accent: 216, 67, 21; --font-main: 'Lora', serif; --font-heading: 'Cormorant Garamond', serif; --radius: 12px;"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjIzMWY0NDIyYmI5Y2VmMTA3OTdkMjYzZjBlYzQ4ZDNiODVhOTg5NTAiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwNDg3MTI0MzkxNzA3NDc2OTkyMCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzYyNmM4MWU2ZGQzZTNmMmFfY2FybmV0X3JlY2V0dGVzLmh0bWwtNDM2In0sImV4cCI6MTc3Njc4NzY1MCwiaWF0IjoxNzc2Nzg0MDUwLCJhbGciOiJSUzI1NiJ9.VO73KDDDjKHIKmBKGodgfrWfEGyyxG0Jjmv_4BiQG_QHwXPNedqZaLUHI7BjAmaO7Ef1oj6duuGM_TJCtkvSvcsoLUpfdWacgDdvGYwbft890WGWsWYL_zQ6sZJb5Yd7SMBHrYY5n76oxf80FWmC_1-yZDQjj6Vb70MrlwED27r2PNvBNZsE7LV-2tWShLFjsrSEiXgFncHDZEj-LTGO9vuVzydqSGJgmApi28RIIZ6STlI0K1dRtd55Q7_3jlqrznF594VPDBjt2DemEcrMcRZXXTZEf6IPrcXeu9_zqCPdltljXEkfiw4R9NvSPW5QxLwsXNnb3AEOHJkyPrzvqQ","c_626c81e6dd3e3f2a_carnet_recettes.html-436")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);const f={type:"send",data:new Uint8Array(a)};let g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){const f=new MessageChannel;t=f.port1;const g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}const c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";let l=0,t=null,r=null,q=[];const F=new TextEncoder,
+G=new TextDecoder;c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{let a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});const I=function(){let a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{const g=Math.random()*
+16|0;return(f==="x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;
+(g=t)==null||g.postMessage(a)}};Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);const C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");const E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{const k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Carnet de Recettes</title>
+    
+    <!-- Injection du moteur Tailwind et configuration des couleurs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base: '#fdfbf7',
+                        panel: '#ffffff',
+                        primary: '#3e2723',
+                        accent: '#d84315',
+                        danger: '#c62828',
+                        success: '#2e7d32',
+                        muted: '#8d6e63'
+                    },
+                    fontFamily: {
+                        main: ['Lora', 'serif'],
+                        heading: ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rgb-base: 253, 251, 247;
+            --rgb-panel: 255, 255, 255;
+            --rgb-primary: 62, 39, 35;
+            --rgb-accent: 216, 67, 21;
+            --rgb-muted: 141, 110, 99;
+            --font-main: 'Lora', serif;
+            --font-heading: 'Cormorant Garamond', serif;
+            --radius: 12px;
+        }
+
+        /* Justification systématique incluant les listes */
+        .book-content p, .book-content .rich-text, .presentation-text, .ingredients-table td, .etape-list li { 
+            text-align: justify !important; 
+        }
+
+        body { font-family: var(--font-main); background-color: rgb(var(--rgb-base)); color: rgb(var(--rgb-primary)); }
+        
+        .book-content h1 { 
+            font-family: var(--font-heading); 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            margin-bottom: 0; 
+            color: rgb(var(--rgb-accent)); 
+            border-bottom: 1px solid rgba(var(--rgb-accent), 0.3); 
+            padding-bottom: 0.5rem; 
+            text-align: center;
+        }
+
+        .book-content p, .book-content .rich-text { 
+            line-height: 1.8; 
+            font-size: 1.1rem;
+            color: rgb(var(--rgb-primary)); 
+            white-space: pre-wrap; 
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- BLOC ÉTAPES --- */
+        .etape-list {
+            list-style-type: decimal;
+            padding-left: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: rgb(var(--rgb-primary));
+        }
+        .etape-list li { margin-bottom: 0.75rem; padding-left: 0.5rem; }
+        .etape-list li::marker { font-weight: bold; color: rgb(var(--rgb-accent)); }
+
+        /* --- DRAG & DROP --- */
+        body.is-dragging .block-wrapper * { pointer-events: none; }
+        body.is-dragging .edit-controls { display: none !important; }
+        .block-drag-over { border-top: 4px solid rgb(var(--rgb-accent)) !important; padding-top: 1.5rem !important; }
+
+        /* --- CADRAGE IMAGE --- */
+        body.is-panning * { cursor: move !important; user-select: none !important; }
+        .presentation-img-container { background-position: center; background-repeat: no-repeat; }
+
+        /* --- BLOC PRÉSENTATION FIABILISÉ --- */
+        .phase-gradient-overlay {
+            background: linear-gradient(to right, rgb(var(--rgb-base)) 0%, rgb(var(--rgb-base)) 45%, transparent 75%);
+        }
+
+        /* --- TABLEAU INGRÉDIENTS --- */
+        .ingredients-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; background: rgba(255,255,255,0.5); border-radius: 8px; overflow: hidden; table-layout: fixed; }
+        .ingredients-table th { background-color: rgba(var(--rgb-accent), 0.05); color: rgb(var(--rgb-accent)); font-weight: 700; border: 1px solid rgba(var(--rgb-primary), 0.1); padding: 12px; text-align: left; }
+        .ingredients-table td { border: 1px solid rgba(var(--rgb-primary), 0.1); padding: 12px; vertical-align: top; overflow-wrap: break-word; }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* --- BOUTONS --- */
+        .recipe-btn { 
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            border: 1px solid rgba(var(--rgb-primary), 0.15); color: rgb(var(--rgb-primary)); 
+            background: #ffffff; padding: 10px 16px; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+            border-radius: var(--radius); font-weight: 600; font-size: 0.85rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .recipe-btn:hover { background: rgb(var(--rgb-primary)); color: white; transform: translateY(-1px); }
+        .recipe-btn-icon { width: 44px; height: 44px; padding: 0; flex-shrink: 0; }
+        .recipe-btn-accent { border: 1px solid rgba(var(--rgb-accent), 0.3); color: rgb(var(--rgb-accent)); background: #fff; }
+        .recipe-btn-accent:hover { background: rgb(var(--rgb-accent)); color: white; }
+        .recipe-btn-success { border: 1px solid #2e7d32; color: #2e7d32; background: #fff; }
+        .recipe-btn-success:hover { background: #2e7d32; color: white; }
+        .recipe-btn-danger { border: 1px solid #c62828; color: #c62828; background: #fff; }
+        .recipe-btn-danger:hover { background: #c62828; color: white; }
+        
+        /* Custom Range Slider */
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 14px; width: 14px; border-radius: 50%; background: rgb(var(--rgb-accent)); cursor: pointer; margin-top: -5px; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: rgba(var(--rgb-primary), 0.2); border-radius: 2px; }
+
+        /* --- MOTEUR D'IMPRESSION NATIF --- */
+        @media print {
+            @page { margin: 15mm; size: A4 portrait; }
+            html, body, #app-wrapper, #app-wrapper > div, .flex-1, #main-content { 
+                display: block !important; position: static !important; height: auto !important; min-height: auto !important;
+                max-height: none !important; width: 100% !important; max-width: none !important; overflow: visible !important; 
+                margin: 0 !important; padding: 0 !important; background: white !important; color: black !important;
+            }
+            header, #sidebar, #edit-toolbar, #bookmark-tab, #custom-modal, .edit-controls, button, #floating-toolbar { display: none !important; }
+            #pdf-target { width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+            .block-wrapper, .photo-block, h1, p, .presentation-block { page-break-inside: avoid !important; break-inside: avoid !important; margin-bottom: 1.5rem !important; }
+            .presentation-gradient { background: linear-gradient(to right, white 0%, white 40%, transparent 75%) !important; }
+            .presentation-block { background-color: white !important; border: 1px solid #eee !important; }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.left-0{left:0px}.left-2\.5{left:0.625rem}.top-0{top:0px}.top-2\.5{top:0.625rem}.top-20{top:5rem}.bottom-8{bottom:2rem}.left-8{left:2rem}.-top-6{top:-1.5rem}.left-1\/2{left:50%}.right-0{right:0px}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-\[300\]{z-index:300}.z-\[45\]{z-index:45}.z-\[9999\]{z-index:9999}.z-30{z-index:30}.-m-1{margin:-0.25rem}.mx-1{margin-left:0.25rem;margin-right:0.25rem}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.ml-4{margin-left:1rem}.\!mb-0{margin-bottom:0px !important}.mb-1{margin-bottom:0.25rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-16{margin-top:4rem}.mt-4{margin-top:1rem}.ml-2{margin-left:0.5rem}.inline-block{display:inline-block}.flex{display:flex}.hidden{display:none}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-screen{height:100vh}.h-3\.5{height:0.875rem}.h-full{height:100%}.h-px{height:1px}.min-h-\[200px\]{min-height:200px}.min-h-\[350px\]{min-height:350px}.min-h-\[4rem\]{min-height:4rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.w-px{width:1px}.w-24{width:6rem}.w-3\.5{width:0.875rem}.w-\[60\%\]{width:60%}.w-10{width:2.5rem}.min-w-\[150px\]{min-width:150px}.min-w-\[30px\]{min-width:30px}.max-w-md{max-width:28rem}.max-w-4xl{max-width:56rem}.max-w-\[350px\]{max-width:350px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.cursor-grab{cursor:grab}.cursor-move{cursor:move}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-1\.5{gap:0.375rem}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-b-0{border-bottom-width:0px}.border-l-2{border-left-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-none{border-style:none}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-primary\/10{border-color:rgb(62 39 35 / 0.1)}.border-primary\/20{border-color:rgb(62 39 35 / 0.2)}.border-primary\/5{border-color:rgb(62 39 35 / 0.05)}.border-accent{--tw-border-opacity:1;border-color:rgb(216 67 21 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-accent\/50{border-color:rgb(216 67 21 / 0.5)}.border-danger\/20{border-color:rgb(198 40 40 / 0.2)}.bg-base{--tw-bg-opacity:1;background-color:rgb(253 251 247 / var(--tw-bg-opacity, 1))}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.bg-panel{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-primary\/10{background-color:rgb(62 39 35 / 0.1)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-accent\/10{background-color:rgb(216 67 21 / 0.1)}.bg-accent\/30{background-color:rgb(216 67 21 / 0.3)}.bg-accent\/5{background-color:rgb(216 67 21 / 0.05)}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-primary\/20{background-color:rgb(62 39 35 / 0.2)}.bg-white\/30{background-color:rgb(255 255 255 / 0.3)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-1{padding:0.25rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-12{padding-left:3rem;padding-right:3rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.pb-2{padding-bottom:0.5rem}.pb-32{padding-bottom:8rem}.pl-12{padding-left:3rem}.pl-8{padding-left:2rem}.pr-3{padding-right:0.75rem}.pt-2{padding-top:0.5rem}.pb-20{padding-bottom:5rem}.pb-24{padding-bottom:6rem}.pb-8{padding-bottom:2rem}.pr-4{padding-right:1rem}.pr-6{padding-right:1.5rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.text-right{text-align:right}.font-heading{font-family:Cormorant Garamond, serif}.font-main{font-family:Lora, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-\[11px\]{font-size:11px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-widest{letter-spacing:0.1em}.tracking-\[2px\]{letter-spacing:2px}.text-accent{--tw-text-opacity:1;color:rgb(216 67 21 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-muted{--tw-text-opacity:1;color:rgb(141 110 99 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(62 39 35 / var(--tw-text-opacity, 1))}.text-primary\/30{color:rgb(62 39 35 / 0.3)}.text-primary\/80{color:rgb(62 39 35 / 0.8)}.text-danger{--tw-text-opacity:1;color:rgb(198 40 40 / var(--tw-text-opacity, 1))}.text-muted\/80{color:rgb(141 110 99 / 0.8)}.text-primary\/50{color:rgb(62 39 35 / 0.5)}.opacity-50{opacity:0.5}.opacity-70{opacity:0.7}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-200{transition-duration:200ms}.empty\:before\:content-\[\'Cuisson\'\]:empty::before{--tw-content:'Cuisson';content:var(--tw-content)}.empty\:before\:content-\[\'Difficult\E9\'\]:empty::before{--tw-content:'Difficulté';content:var(--tw-content)}.empty\:before\:content-\[\'Prix\'\]:empty::before{--tw-content:'Prix';content:var(--tw-content)}.empty\:before\:content-\[\'Pr\E9paration\'\]:empty::before{--tw-content:'Préparation';content:var(--tw-content)}.empty\:before\:content-\[\'\[Nom\]\'\]:empty::before{--tw-content:'[Nom]';content:var(--tw-content)}.hover\:scale-125:hover{--tw-scale-x:1.25;--tw-scale-y:1.25;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-accent:hover{--tw-bg-opacity:1;background-color:rgb(216 67 21 / var(--tw-bg-opacity, 1))}.hover\:bg-red-500:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.hover\:text-accent:hover{--tw-text-opacity:1;color:rgb(216 67 21 / var(--tw-text-opacity, 1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(62 39 35 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:opacity-100:hover{opacity:1}.focus\:border-accent:focus{--tw-border-opacity:1;border-color:rgb(216 67 21 / var(--tw-border-opacity, 1))}.focus\:bg-white\/50:focus{background-color:rgb(255 255 255 / 0.5)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group\/pres:hover .group-hover\/pres\:opacity-100{opacity:1}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 768px){.md\:w-\[45\%\]{width:45%}.md\:max-w-\[45\%\]{max-width:45%}.md\:flex-row{flex-direction:row}}</style></head>
+<body class="bg-base text-primary font-main">
+
+    <!-- Barre d'outils flottante pour le formatage du texte (Pop-up) -->
+    <div id="floating-toolbar" class="hidden fixed z-[9999] bg-white border border-gray-200 shadow-xl rounded-lg flex gap-1 p-2 transition-all" style="transform: translateX(-50%);">
+        <button onmousedown="event.preventDefault(); document.execCommand('bold', false, null);" class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 text-gray-800 rounded transition-colors" title="Gras">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path><path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z"></path></svg>
+        </button>
+        <button onmousedown="event.preventDefault(); document.execCommand('italic', false, null);" class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 text-gray-800 rounded transition-colors" title="Italique">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="4" x2="10" y2="4"></line><line x1="14" y1="20" x2="5" y2="20"></line><line x1="15" y1="4" x2="9" y2="20"></line></svg>
+        </button>
+        <button onmousedown="event.preventDefault(); document.execCommand('underline', false, null);" class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 text-gray-800 rounded transition-colors" title="Souligné">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3"></path><line x1="4" y1="21" x2="20" y2="21"></line></svg>
+        </button>
+    </div>
+
+    <div id="app-wrapper" class="h-screen flex flex-col overflow-hidden relative">
+        <!-- En-tête -->
+        <header class="bg-base border-b border-primary/10 p-4 flex justify-between items-center z-20 shrink-0 relative">
+            <div class="flex items-center gap-4 pl-12">
+                <h1 class="text-2xl font-bold text-primary font-heading " id="header-title">Le Carnet Gourmand</h1>
+            </div>
+            <div class="flex gap-3">
+                <button id="toggle-mode-btn" class="text-primary opacity-50 hover:opacity-100 transition-opacity p-2 rounded-full" title="Mode Édition">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Bandeau d'Édition Fixé sous l'en-tête -->
+        <div id="edit-toolbar" class="w-full bg-white border-b border-primary/20 p-4 justify-between items-center z-10 shadow-sm flex shrink-0 hidden">
+            <div class="flex items-center gap-3 overflow-x-auto hide-scrollbar">
+                <span class="text-accent text-[10px] font-bold uppercase tracking-widest border-r border-primary/10 pr-3 shrink-0">ÉDITEUR</span>
+                
+                <div class="flex gap-2 shrink-0">
+                    <button onclick="app.addPage()" class="recipe-btn recipe-btn-accent px-5">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        + RECETTE
+                    </button>
+                    <div class="w-px bg-primary/10 h-8 mx-1"></div>
+                    
+                    <button onclick="app.addBlock('TITLE')" class="recipe-btn recipe-btn-icon" title="Bloc Titre">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"></path></svg>
+                    </button>
+                    <button onclick="app.addBlock('PRESENTATION')" class="recipe-btn recipe-btn-accent recipe-btn-icon" title="Bloc Présentation">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    </button>
+                    <button onclick="app.addBlock('INGREDIENTS')" class="recipe-btn recipe-btn-icon" title="Tableau Ingrédients">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"></path><path d="M3 9h18M3 15h18M9 9v12"></path></svg>
+                    </button>
+                    <button onclick="app.addBlock('ETAPE')" class="recipe-btn recipe-btn-icon" title="Bloc Étapes (Liste numérotée)">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="10" y1="6" x2="21" y2="6"></line><line x1="10" y1="12" x2="21" y2="12"></line><line x1="10" y1="18" x2="21" y2="18"></line><path d="M4 6h1v4"></path><path d="M4 10h2"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
+                    </button>
+                    <button onclick="app.addBlock('TEXT')" class="recipe-btn recipe-btn-icon" title="Bloc Texte Libre">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="17" y1="10" x2="3" y2="10"></line><line x1="17" y1="18" x2="3" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex gap-2 ml-4 shrink-0">
+                <!-- BOUTONS ICONES UNIQUEMENT -->
+                <button onclick="app.triggerJSONLoad()" class="recipe-btn recipe-btn-icon" title="Importer JSON">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 16 12 12 8 16"></polyline><line x1="12" y1="12" x2="12" y2="21"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                    <input type="file" id="json-input" class="hidden" accept=".json" onchange="app.importJSON(event)">
+                </button>
+                <button onclick="app.exportJSON()" class="recipe-btn recipe-btn-icon" title="Exporter JSON">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </button>
+                <button id="compile-btn" class="recipe-btn recipe-btn-icon recipe-btn-success" title="Sauvegarder en HTML">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </button>
+                <button id="btn-quit-edit" class="recipe-btn recipe-btn-icon recipe-btn-danger" title="Quitter le mode édition">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-1 overflow-hidden z-0">
+            <aside id="sidebar" class="bg-panel flex flex-col overflow-y-auto hide-scrollbar shrink-0 shadow-sm transition-all duration-300 w-64 border-r border-primary/10 relative z-20" style="width: 16rem;">
+                <div class="p-4 border-b border-primary/5 sticky top-0 bg-panel z-20">
+                    <div class="relative">
+                        <input type="text" id="sidebar-search" placeholder="Chercher..." class="w-full bg-base border border-primary/10 text-primary p-2 pl-8 rounded-dyn text-sm focus:outline-none focus:border-accent transition-colors" oninput="app.handleSearch(event)">
+                        <svg class="w-4 h-4 absolute left-2.5 top-2.5 text-primary/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                </div>
+                <div id="sidebar-content" class="p-4 flex-1 w-64 pt-2"><nav class="flex flex-col"><div class="mb-1"><h3 onclick="app.toggleCollapse('tab_cuisine')" class="font-bold text-[11px] flex items-center cursor-pointer p-3 font-heading uppercase tracking-[2px] transition-all text-muted hover:text-accent border-l-4 border-transparent"><span class="w-6 flex justify-center mr-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path><line x1="6" y1="17" x2="18" y2="17"></line></svg></span><span>CUISINE</span></h3><ul class="flex flex-col py-1 "></ul></div><div class="mb-1"><h3 onclick="app.toggleCollapse('tab_patisserie')" class="font-bold text-[11px] flex items-center cursor-pointer p-3 font-heading uppercase tracking-[2px] transition-all text-accent bg-accent/10 border-l-4 border-accent"><span class="w-6 flex justify-center mr-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2 1 2 1"></path><path d="M2 21h20"></path><circle cx="12" cy="8" r="2"></circle><circle cx="8" cy="8" r="2"></circle><circle cx="16" cy="8" r="2"></circle></svg></span><span>PÂTISSERIE</span></h3><ul class="flex flex-col py-1 "><li><a href="#" onclick="app.activeTabId='tab_patisserie'; app.activePageId='page_tarte'; app.activeVariantIndex=0; app.render(); return false;" class="text-sm py-2 pl-12 pr-4 transition-all text-accent font-bold bg-accent/5 border-l-2 border-accent flex items-center justify-between"><span>Tarte aux Pommes Maison</span></a></li></ul></div><div class="mb-1"><h3 onclick="app.toggleCollapse('tab_cocktail')" class="font-bold text-[11px] flex items-center cursor-pointer p-3 font-heading uppercase tracking-[2px] transition-all text-muted hover:text-accent border-l-4 border-transparent"><span class="w-6 flex justify-center mr-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 2l10 10 10-10ZM12 12v10M8 22h8"></path><circle cx="12" cy="5" r="1"></circle></svg></span><span>COCKTAIL</span></h3><ul class="flex flex-col py-1 "></ul></div><div class="mb-1"><h3 onclick="app.toggleCollapse('tab_chimie')" class="font-bold text-[11px] flex items-center cursor-pointer p-3 font-heading uppercase tracking-[2px] transition-all text-muted hover:text-accent border-l-4 border-transparent"><span class="w-6 flex justify-center mr-2"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v5.3l-5.6 9A2 2 0 0 0 6 21h12a2 2 0 0 0 1.6-3.7L14 8.3V3"></path><line x1="6" y1="14" x2="18" y2="14"></line></svg></span><span>CHIMIE</span></h3><ul class="flex flex-col py-1 "></ul></div></nav></div>
+            </aside>
+
+            <button id="bookmark-tab" class="fixed top-20 left-0 z-[45] bg-panel border-y border-r border-primary/10 p-2 rounded-r-dyn shadow-md transition-all duration-300" style="transform: translateX(16rem);">
+                <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+
+            <!-- Zone de contenu -->
+            <main class="flex-1 bg-transparent overflow-y-auto p-8 relative pb-32 z-0" id="main-content"><div id="pdf-target" class="max-w-4xl mx-auto book-content pb-24"><div class="group relative mb-12 block-wrapper transition-all duration-200" data-id="b1"><div class="relative flex flex-col justify-center items-center group/title mb-2">
+                                <div class="w-full relative px-12 flex justify-center items-center">
+                                    <h1 class="!mb-0 border-b-0">La Tarte aux Pommes Tradition</h1>
+                                </div>
+                                <div class="mt-4 flex justify-center items-center gap-3">
+                                    
+                                    
+                                    
+                                    
+                                </div></div><div class="w-24 h-px bg-accent/30 mx-auto mb-8"></div></div><div class="group relative mb-12 block-wrapper transition-all duration-200" data-id="b2"><div class="relative overflow-hidden rounded-xl bg-base min-h-[350px] flex flex-col border border-primary/5 shadow-sm group/pres"><div class="absolute inset-0 z-0 flex justify-end">
+                                <div class="w-[60%] relative h-full">
+                                    <div class="w-full h-full presentation-img-container " style="background-image: url('https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?auto=format&amp;fit=crop&amp;q=80&amp;w=800'); background-position: 50% 50%; background-size: 100%;" onmousedown="app.startPan(event, 'b2')"></div>
+                                </div>
+                                <div class="absolute inset-0 phase-gradient-overlay pointer-events-none z-10"></div>
+                            </div>
+                            <div class="relative z-10 w-full p-8 pb-20 flex flex-col md:flex-row pointer-events-none">
+                                <div class="w-full md:w-[45%] pr-6 pointer-events-auto">
+                                    <div class="w-full min-h-[200px] text-lg italic text-primary/80 focus:outline-none presentation-text" oninput="app.updatePresentationTextSilent('b2', this.innerText)">Le secret réside dans le choix des pommes : prenez des Reinettes ou des Golden pour la tenue à la cuisson.</div>
+                                </div>
+                            </div><div class="absolute bottom-8 left-8 z-20 flex flex-wrap items-center gap-2 pointer-events-auto md:max-w-[45%]"><div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-primary border border-primary/20 px-3 py-1.5 rounded-lg shadow-sm text-xs font-semibold ">
+                                <div class="text-accent"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                                <div>6 pers.</div>
+                            </div><div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-primary border border-primary/20 px-3 py-1.5 rounded-lg shadow-sm text-xs font-semibold ">
+                                <div class="text-accent"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                                <div>20 min</div>
+                            </div><div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-primary border border-primary/20 px-3 py-1.5 rounded-lg shadow-sm text-xs font-semibold ">
+                                <div class="text-accent"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg></div>
+                                <div>35 min</div>
+                            </div><div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-primary border border-primary/20 px-3 py-1.5 rounded-lg shadow-sm text-xs font-semibold ">
+                                <div class="text-accent"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                                <div>Facile</div>
+                            </div><div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-primary border border-primary/20 px-3 py-1.5 rounded-lg shadow-sm text-xs font-semibold ">
+                                <div class="text-accent"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="18" x2="12" y2="22"></line><line x1="12" y1="2" x2="12" y2="6"></line></svg></div>
+                                <div>€€</div>
+                            </div></div></div></div><div class="group relative mb-12 block-wrapper transition-all duration-200" data-id="b3"><table class="ingredients-table shadow-sm"><colgroup><col style="width: 66.6%;"><col style="width: 33.3%;"></colgroup><tbody><tr><th>Ingrédient</th><th>Quantité</th></tr><tr><td>Pommes</td><td>5</td></tr><tr><td>Pâte Sablée</td><td>1</td></tr><tr><td>Sucre</td><td>50g</td></tr><tr><td>Beurre doux</td><td>20g</td></tr></tbody></table></div><div class="group relative mb-12 block-wrapper transition-all duration-200" data-id="b4"><ol class="etape-list"><li>Préchauffez le four à 180°C.</li><li>Étalez la pâte dans un moule beurré et piquez le fond avec une fourchette.</li><li>Épluchez, videz et coupez les pommes en fines lamelles.</li><li>Disposez les lamelles en rosace sur le fond de tarte.</li><li>Saupoudrez de sucre et ajoutez quelques noisettes de beurre.</li><li>Enfournez pour 35 minutes environ, jusqu'à ce que les bords soient dorés.</li></ol></div><div class="mt-16 text-right font-heading text-xl text-primary/80 italic border-t border-primary/10 pt-4 max-w-[350px] ml-auto pb-8"><span class="opacity-70">Recette proposée par</span><br><span class="font-bold text-accent text-2xl mt-1 inline-block">Mamie Nova</span></div></div></main>
+        </div>
+    </div> <!-- Fin app-wrapper -->
+
+    <div id="custom-modal" class="hidden fixed inset-0 bg-black/50 z-[300] flex items-center justify-center backdrop-blur-sm">
+        <div class="bg-panel border border-primary/10 p-6 shadow-2xl max-w-md w-full mx-4 rounded-dyn">
+            <h3 id="modal-title" class="text-primary font-bold text-xl mb-4 font-heading border-b border-primary/5 pb-2">Information</h3>
+            <input type="text" id="modal-input" class="hidden w-full bg-base border border-primary/10 text-primary p-3 mb-4 focus:outline-none focus:border-accent rounded-dyn">
+            <p id="modal-text" class="hidden text-muted mb-6"></p>
+            <div class="flex justify-end gap-3">
+                <button id="modal-cancel" class="recipe-btn">Annuler</button>
+                <button id="modal-confirm" class="recipe-btn recipe-btn-success">Valider</button>
+            </div>
+        </div>
+    </div>
+
+    <script id="app-state" type="application/json">{
+    "bookTitle": "Le Carnet Gourmand",
+    "tabs": [
+        { "id": "tab_cuisine", "title": "CUISINE", "pages": [] },
+        { "id": "tab_patisserie", "title": "PÂTISSERIE", "pages": [
+            {
+                "id": "page_tarte",
+                "title": "Tarte aux Pommes Maison",
+                "variants": [
+                    {
+                        "id": "v_classic",
+                        "name": "Originale",
+                        "signature": "Mamie Nova",
+                        "blocks": [
+                            { "id": "b1", "type": "TITLE", "content": "La Tarte aux Pommes Tradition" },
+                            { "id": "b2", "type": "PRESENTATION", "content": { "text": "Le secret réside dans le choix des pommes : prenez des Reinettes ou des Golden pour la tenue à la cuisson.", "image": "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?auto=format&fit=crop&q=80&w=800", "imageZoom": 100, "imagePos": "50% 50%", "infos": { "portions": "6 pers.", "prep": "20 min", "cook": "35 min", "diff": "Facile", "price": "€€" } } },
+                            { "id": "b3", "type": "INGREDIENTS", "content": [["Ingrédient", "Quantité"], ["Pommes", "5"], ["Pâte Sablée", "1"], ["Sucre", "50g"], ["Beurre doux", "20g"]] },
+                            { "id": "b4", "type": "ETAPE", "content": "<li>Préchauffez le four à 180°C.</li><li>Étalez la pâte dans un moule beurré et piquez le fond avec une fourchette.</li><li>Épluchez, videz et coupez les pommes en fines lamelles.</li><li>Disposez les lamelles en rosace sur le fond de tarte.</li><li>Saupoudrez de sucre et ajoutez quelques noisettes de beurre.</li><li>Enfournez pour 35 minutes environ, jusqu'à ce que les bords soient dorés.</li>" }
+                        ]
+                    }
+                ]
+            }
+        ]},
+        { "id": "tab_cocktail", "title": "COCKTAIL", "pages": [] },
+        { "id": "tab_chimie", "title": "CHIMIE", "pages": [] }
+    ]
+}</script>
+
+    <script id="app-engine">
+        const app = {
+            state: null, isEditMode: false, sidebarOpen: window.innerWidth > 768,
+            activeTabId: null, activePageId: null, activeVariantIndex: 0, collapsedTabs: [], searchQuery: '',
+
+            init() {
+                const stateEl = document.getElementById('app-state');
+                const baseTabs = [
+                    { id: "tab_cuisine", "title": "CUISINE", "pages": [] },
+                    { id: "tab_patisserie", "title": "PATISSERIE", "pages": [] },
+                    { id: "tab_cocktail", title: "COCKTAIL", "pages": [] },
+                    { id: "tab_chimie", title: "CHIMIE", "pages": [] }
+                ];
+                try { 
+                    this.state = JSON.parse(stateEl.textContent); 
+                    if (!this.state.tabs || this.state.tabs.length === 0) this.state.tabs = baseTabs;
+                } catch (e) { this.state = { bookTitle: "Mon Carnet", tabs: baseTabs }; }
+
+                this.migrateData();
+
+                if (this.state.tabs.length > 0) {
+                    this.activeTabId = this.state.tabs[0].id;
+                    for(let t of this.state.tabs) {
+                        if(t.pages.length > 0) { this.activeTabId = t.id; this.activePageId = t.pages[0].id; break; }
+                    }
+                }
+                this.bindEvents();
+                this.render();
+            },
+
+            migrateData() {
+                this.state.tabs.forEach(tab => {
+                    if (tab.pages) {
+                        tab.pages.forEach(p => {
+                            if (p.blocks) { 
+                                p.variants = [{ id: this.generateId(), name: "Originale", signature: "", blocks: p.blocks }];
+                                delete p.blocks;
+                            }
+                            if (p.variants) {
+                                p.variants.forEach(v => {
+                                    v.blocks = v.blocks.filter(b => b.type !== 'TOC');
+                                });
+                            }
+                        });
+                        tab.pages.sort((a, b) => a.title.localeCompare(b.title, 'fr', {sensitivity: 'base'}));
+                    }
+                });
+            },
+
+            bindEvents() {
+                this.doPanBinding = this.doPan.bind(this);
+                this.endPanBinding = this.endPan.bind(this);
+
+                const addEv = (id, type, fn) => {
+                    const el = document.getElementById(id);
+                    if (el) el.addEventListener(type, fn.bind(this));
+                };
+                addEv('bookmark-tab', 'click', () => { this.sidebarOpen = !this.sidebarOpen; this.render(); });
+                addEv('toggle-mode-btn', 'click', () => { this.isEditMode = true; this.render(); });
+                addEv('btn-quit-edit', 'click', () => { this.isEditMode = false; this.render(); });
+                addEv('compile-btn', 'click', () => this.compileAndDownload());
+
+                document.addEventListener('selectionchange', () => {
+                    const toolbar = document.getElementById('floating-toolbar');
+                    if (!this.isEditMode || !toolbar) { if(toolbar) toolbar.classList.add('hidden'); return; }
+                    const selection = window.getSelection();
+                    if (selection && selection.rangeCount > 0 && !selection.isCollapsed) {
+                        let node = selection.anchorNode;
+                        if (node.nodeType === 3) node = node.parentNode;
+                        if (!node.closest('[contenteditable="true"]')) { toolbar.classList.add('hidden'); return; }
+                        const range = selection.getRangeAt(0);
+                        const rect = range.getBoundingClientRect();
+                        if(rect.width === 0 && rect.height === 0) { toolbar.classList.add('hidden'); return; }
+                        toolbar.classList.remove('hidden');
+                        let topPosition = rect.top - 50;
+                        if (topPosition < 10) topPosition = rect.bottom + 10;
+                        toolbar.style.top = `${topPosition}px`;
+                        toolbar.style.left = `${rect.left + (rect.width / 2)}px`;
+                    } else { toolbar.classList.add('hidden'); }
+                });
+            },
+
+            handleImageUpload(event, blockId) {
+                const file = event.target.files[0]; if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        let w = img.width, h = img.height; if (w > 1200) { h *= 1200/w; w = 1200; }
+                        canvas.width = w; canvas.height = h;
+                        const ctx = canvas.getContext('2d'); ctx.drawImage(img, 0, 0, w, h);
+                        const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+                        const variant = this.getActiveVariant();
+                        const block = variant.blocks.find(b => b.id === blockId);
+                        if (block) { 
+                            block.content.image = dataUrl; 
+                            block.content.imageZoom = 100;
+                            block.content.imagePos = "50% 50%";
+                            this.renderMainContent(); 
+                        }
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+                event.target.value = '';
+            },
+
+            addPage() {
+                if(!this.activeTabId) { this.customAlert("Veuillez activer un chapitre (ex: CUISINE)."); return; }
+                this.customPrompt("Nom de la recette :", "", (title) => {
+                    if(!title) return;
+                    const tab = this.state.tabs.find(t => t.id === this.activeTabId);
+                    const newId = this.generateId();
+                    tab.pages.push({ 
+                        id: newId, title, 
+                        variants: [{ id: this.generateId(), name: "Originale", signature: "", blocks: [{id: this.generateId(), type:'TITLE', content: title}] }] 
+                    });
+                    tab.pages.sort((a, b) => a.title.localeCompare(b.title, 'fr', {sensitivity: 'base'}));
+                    this.collapsedTabs = this.collapsedTabs.filter(x => x !== this.activeTabId);
+                    this.activePageId = newId; 
+                    this.activeVariantIndex = 0;
+                    this.render();
+                });
+            },
+
+            addVariant() {
+                const page = this.getActivePage();
+                if (!page) return;
+                this.customPrompt("Nom de la variante (ex: Express, Végé...) :", "", (name) => {
+                    if (!name) return;
+                    const currentVariant = page.variants[this.activeVariantIndex || 0];
+                    const newBlocks = JSON.parse(JSON.stringify(currentVariant.blocks));
+                    newBlocks.forEach(b => b.id = this.generateId()); 
+                    page.variants.push({ id: this.generateId(), name: name, signature: currentVariant.signature || "", blocks: newBlocks });
+                    this.activeVariantIndex = page.variants.length - 1;
+                    this.render(); 
+                });
+            },
+
+            nextVariant() {
+                const page = this.getActivePage();
+                if (!page || page.variants.length <= 1) return;
+                this.activeVariantIndex = (this.activeVariantIndex + 1) % page.variants.length;
+                this.render(); 
+            },
+            
+            prevVariant() {
+                const page = this.getActivePage();
+                if (!page || page.variants.length <= 1) return;
+                this.activeVariantIndex = (this.activeVariantIndex - 1 + page.variants.length) % page.variants.length;
+                this.render();
+            },
+
+            addBlock(type) {
+                const variant = this.getActiveVariant(); if(!variant) return;
+                let content = "";
+                if (type === 'TITLE') content = "Nouveau Titre";
+                else if (type === 'PRESENTATION') content = { text: "Histoire du plat...", image: "", imageZoom: 100, imagePos: "50% 50%", infos: { portions: "", prep: "", cook: "", diff: "", price: "" } };
+                else if (type === 'INGREDIENTS') content = [["Ingrédient", "Quantité"], ["", ""]];
+                else if (type === 'ETAPE') content = "<li>Nouvelle étape...</li>";
+                else content = "Nouveau texte...";
+                variant.blocks.push({ id: this.generateId(), type, content });
+                this.renderMainContent();
+            },
+
+            getActivePage() { return this.state.tabs.flatMap(t => t.pages).find(p => p.id === this.activePageId) || null; },
+            
+            getActiveVariant() {
+                const page = this.getActivePage();
+                if (!page) return null;
+                if (this.activeVariantIndex === undefined || this.activeVariantIndex >= page.variants.length) this.activeVariantIndex = 0;
+                return page.variants[this.activeVariantIndex];
+            },
+
+            handleSearch(event) { this.searchQuery = event.target.value.toLowerCase(); this.renderSidebar(); },
+            toggleCollapse(id) { 
+                this.activeTabId = id; 
+                if(this.collapsedTabs.includes(id)) this.collapsedTabs = this.collapsedTabs.filter(x => x !== id); 
+                else this.collapsedTabs.push(id); 
+                this.renderSidebar(); 
+            },
+            generateId() { return '_' + Math.random().toString(36).substr(2, 9); },
+
+            render() {
+                const sidebar = document.getElementById('sidebar');
+                const bookmarkTab = document.getElementById('bookmark-tab');
+                if (sidebar) {
+                    sidebar.style.width = this.sidebarOpen ? '16rem' : '0';
+                    bookmarkTab.style.transform = this.sidebarOpen ? 'translateX(16rem)' : 'translateX(0)';
+                }
+                const toolbar = document.getElementById('edit-toolbar');
+                if(toolbar) toolbar.classList.toggle('hidden', !this.isEditMode);
+                const headerTitle = document.getElementById('header-title');
+                if(headerTitle) { headerTitle.textContent = this.state.bookTitle; headerTitle.className = "text-2xl font-bold text-primary font-heading " + (this.isEditMode ? "cursor-pointer border-b border-dashed border-accent" : ""); }
+                if (headerTitle) headerTitle.onclick = () => {
+                    if (!this.isEditMode) return;
+                    this.customPrompt("Titre du carnet :", this.state.bookTitle, (val) => {
+                        if(val) { this.state.bookTitle = val; this.render(); }
+                    });
+                };
+                this.renderSidebar();
+                this.renderMainContent();
+            },
+
+            renderSidebar() {
+                const container = document.getElementById('sidebar-content'); if(!container) return;
+                let html = '<nav class="flex flex-col">';
+                const icons = {
+                    "tab_cuisine": `<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>`,
+                    "tab_patisserie": `<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2 1 2 1"/><path d="M2 21h20"/><circle cx="12" cy="8" r="2"/><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/></svg>`,
+                    "tab_cocktail": `<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 2l10 10 10-10ZM12 12v10M8 22h8"/><circle cx="12" cy="5" r="1"/></svg>`,
+                    "tab_chimie": `<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v5.3l-5.6 9A2 2 0 0 0 6 21h12a2 2 0 0 0 1.6-3.7L14 8.3V3"/><line x1="6" y1="14" x2="18" y2="14"/></svg>`
+                };
+                this.state.tabs.forEach(tab => {
+                    const collapsed = this.collapsedTabs.includes(tab.id);
+                    const isActiveTab = this.activeTabId === tab.id;
+                    const tabColor = isActiveTab ? 'text-accent bg-accent/10 border-l-4 border-accent' : 'text-muted hover:text-accent border-l-4 border-transparent';
+                    html += `<div class="mb-1"><h3 onclick="app.toggleCollapse('${tab.id}')" class="font-bold text-[11px] flex items-center cursor-pointer p-3 font-heading uppercase tracking-[2px] transition-all ${tabColor}"><span class="w-6 flex justify-center mr-2">${icons[tab.id] || ''}</span><span>${tab.title}</span></h3>`;
+                    html += `<ul class="flex flex-col py-1 ${collapsed ? 'hidden' : ''}">`;
+                    tab.pages.forEach(p => { 
+                        if (this.searchQuery && !p.title.toLowerCase().includes(this.searchQuery)) return; 
+                        const isActivePage = this.activePageId === p.id;
+                        const pageColor = isActivePage ? 'text-accent font-bold bg-accent/5 border-l-2 border-accent' : 'text-primary/70 hover:text-accent border-l-2 border-transparent';
+                        const dotsHtml = (p.variants && p.variants.length > 1) 
+                            ? `<div class="flex gap-1 ml-2 shrink-0">` + p.variants.map((v, i) => `<span class="w-1.5 h-1.5 rounded-full ${(isActivePage && this.activeVariantIndex === i) ? 'bg-accent' : 'bg-accent/30'}"></span>`).join('') + `</div>` : '';
+                        html += `<li><a href="#" onclick="app.activeTabId='${tab.id}'; app.activePageId='${p.id}'; app.activeVariantIndex=0; app.render(); return false;" class="text-sm py-2 pl-12 pr-4 transition-all ${pageColor} flex items-center justify-between"><span>${p.title}</span>${dotsHtml}</a></li>`; 
+                    });
+                    html += `</ul></div>`;
+                });
+                container.innerHTML = html;
+            },
+
+            renderMainContent() {
+                const main = document.getElementById('main-content'); if(!main) return;
+                const page = this.getActivePage(); 
+                const variant = this.getActiveVariant();
+                if (!page || !variant) { main.innerHTML = `<div class="h-full flex items-center justify-center text-muted italic">Sélectionnez une recette...</div>`; return; }
+                let html = `<div id="pdf-target" class="max-w-4xl mx-auto book-content pb-24">`;
+                variant.blocks.forEach(b => {
+                    html += `<div class="group relative mb-12 block-wrapper transition-all duration-200" data-id="${b.id}" ${this.isEditMode ? `draggable="true" ondragstart="app.dragStart(event, '${b.id}')" ondragover="app.dragOver(event)" ondragleave="app.dragLeave(event)" ondrop="app.drop(event, '${b.id}')" ondragend="app.dragEnd(event)"` : ''}>`;
+                    if (this.isEditMode) { 
+                        html += `<div class="edit-controls absolute -top-6 right-0 opacity-0 group-hover:opacity-100 flex gap-2 z-20 transition-opacity">
+                            <div class="cursor-grab bg-white px-2 py-1 rounded border border-primary/20 shadow-sm flex items-center text-primary/50 hover:text-primary" onmousedown="app.enableBlockDrag('${b.id}')" onmouseup="app.disableBlockDrag('${b.id}')"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="4"/><circle cx="9" cy="5" r="4"/><circle cx="9" cy="19" r="4"/><circle cx="15" cy="12" r="4"/><circle cx="15" cy="5" r="4"/><circle cx="15" cy="19" r="4"/></svg></div>
+                            <button onclick="app.deleteBlock('${b.id}')" class="text-danger font-bold bg-white px-2 py-1 rounded border border-danger/20 hover:bg-red-500 hover:text-white transition-colors shadow-sm">✕</button>
+                        </div>`; 
+                    }
+                    if (b.type === 'TITLE') {
+                        html += `<div class="relative flex flex-col justify-center items-center group/title mb-2">
+                                <div class="w-full relative px-12 flex justify-center items-center">
+                                    ${this.isEditMode ? `<input type="text" class="w-full text-center text-4xl font-bold text-accent font-heading bg-transparent focus:outline-none border-b border-dashed border-accent" value="${b.content}" oninput="app.updateBlockSilent('${b.id}', this.value)">` : `<h1 class="!mb-0 border-b-0">${b.content}</h1>`}
+                                </div>
+                                <div class="mt-4 flex justify-center items-center gap-3">
+                                    ${page.variants.length > 1 ? `<button onclick="app.prevVariant()" class="text-accent bg-accent/5 hover:bg-accent hover:text-white transition-colors w-8 h-8 rounded-full flex items-center justify-center shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg></button>` : ''}
+                                    ${(page.variants.length > 1 || this.isEditMode) ? `<div class="text-center text-[10px] font-bold tracking-widest uppercase text-muted/80">VARIANTE : ${variant.name} ${page.variants.length > 1 ? `(${this.activeVariantIndex + 1}/${page.variants.length})` : ''}</div>` : ''}
+                                    ${page.variants.length > 1 ? `<button onclick="app.nextVariant()" class="text-accent bg-accent/5 hover:bg-accent hover:text-white transition-colors w-8 h-8 rounded-full flex items-center justify-center shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></button>` : ''}
+                                    ${this.isEditMode ? `<button onclick="app.addVariant()" class="bg-accent/10 hover:bg-accent text-accent hover:text-white w-8 h-8 rounded-full flex items-center justify-center font-bold transition-colors shadow-sm ml-2">+</button>` : ''}
+                                </div></div><div class="w-24 h-px bg-accent/30 mx-auto mb-8"></div>`;
+                    } 
+                    else if (b.type === 'TEXT') {
+                        if(this.isEditMode) html += `<div contenteditable="true" class="w-full min-h-[4rem] p-4 border border-dashed border-primary/20 rounded focus:outline-none bg-white/30" oninput="app.updateBlockSilent('${b.id}', this.innerHTML)">${b.content}</div>`;
+                        else html += `<div class="rich-text">${b.content}</div>`;
+                    }
+                    else if (b.type === 'ETAPE') {
+                        if(this.isEditMode) html += `<ol contenteditable="true" class="w-full min-h-[4rem] p-4 border border-dashed border-primary/20 rounded focus:outline-none bg-white/30 etape-list" oninput="app.updateBlockSilent('${b.id}', this.innerHTML)">${b.content}</ol>`;
+                        else html += `<ol class="etape-list">${b.content}</ol>`;
+                    }
+                    else if (b.type === 'PRESENTATION') {
+                        const zoom = b.content.imageZoom || 100, pos = b.content.imagePos || '50% 50%', infos = b.content.infos || {};
+                        html += `<div class="relative overflow-hidden rounded-xl bg-base min-h-[350px] flex flex-col border border-primary/5 shadow-sm group/pres">`;
+                        if (this.isEditMode) {
+                            html += `<div class="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4 bg-white/95 backdrop-blur px-4 py-2 rounded-full shadow-xl border border-primary/20 transition-opacity opacity-0 group-hover/pres:opacity-100 pointer-events-auto">
+                                <label class="cursor-pointer text-accent hover:text-primary transition-colors flex items-center gap-2 font-bold text-[10px] tracking-widest uppercase"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Changer<input type="file" accept="image/*" class="hidden" onchange="app.handleImageUpload(event, '${b.id}')"></label>
+                                <div class="w-px h-4 bg-primary/20"></div><input type="range" min="100" max="300" value="${zoom}" oninput="app.updateZoom('${b.id}', this.value)" class="w-24">
+                                <div class="w-px h-4 bg-primary/20"></div><div class="text-[10px] text-muted font-bold tracking-widest uppercase">Cadrage souris</div>
+                            </div>`;
+                        }
+                        const infoFields = [
+                            { key: 'portions', icon: '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>', placeholder: 'Nb portions' },
+                            { key: 'prep', icon: '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>', placeholder: 'Préparation' },
+                            { key: 'cook', icon: '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>', placeholder: 'Cuisson' },
+                            { key: 'diff', icon: '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>', placeholder: 'Difficulté' },
+                            { key: 'price', icon: '<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="18" x2="12" y2="22"></line><line x1="12" y1="2" x2="12" y2="6"></line></svg>', placeholder: 'Prix' }
+                        ];
+                        let infosHtml = `<div class="absolute bottom-8 left-8 z-20 flex flex-wrap items-center gap-2 pointer-events-auto md:max-w-[45%]">`;
+                        infoFields.forEach(f => {
+                            const val = infos[f.key] || '';
+                            if (!this.isEditMode && !val) return; 
+                            infosHtml += `<div class="flex items-center gap-1.5 bg-white/90 backdrop-blur-sm text-primary border border-primary/20 px-3 py-1.5 rounded-lg shadow-sm text-xs font-semibold ${this.isEditMode && !val ? 'opacity-50' : ''}">
+                                <div class="text-accent">${f.icon}</div>
+                                ${this.isEditMode ? `<div contenteditable="true" class="focus:outline-none min-w-[30px] empty:before:content-['${f.placeholder}']" oninput="app.updatePresentationInfoSilent('${b.id}', '${f.key}', this.innerText)">${val}</div>` : `<div>${val}</div>`}
+                            </div>`;
+                        });
+                        infosHtml += `</div>`;
+                        html += `<div class="absolute inset-0 z-0 flex justify-end">
+                                <div class="w-[60%] relative h-full">
+                                    ${b.content.image ? `<div class="w-full h-full presentation-img-container ${this.isEditMode ? 'cursor-move' : ''}" style="background-image: url('${b.content.image}'); background-position: ${pos}; background-size: ${zoom}%;" onmousedown="app.startPan(event, '${b.id}')"></div>` : `<div class="w-full h-full bg-primary/5"></div>`}
+                                </div>
+                                <div class="absolute inset-0 phase-gradient-overlay pointer-events-none z-10"></div>
+                            </div>
+                            <div class="relative z-10 w-full p-8 pb-20 flex flex-col md:flex-row pointer-events-none">
+                                <div class="w-full md:w-[45%] pr-6 pointer-events-auto">
+                                    <div class="w-full min-h-[200px] text-lg italic text-primary/80 focus:outline-none presentation-text" ${this.isEditMode ? 'contenteditable="true"' : ''} oninput="app.updatePresentationTextSilent('${b.id}', this.innerText)">${b.content.text}</div>
+                                </div>
+                            </div>${infosHtml}</div>`;
+                    }
+                    else if (b.type === 'INGREDIENTS') {
+                        html += `<table class="ingredients-table shadow-sm"><colgroup><col style="width: 66.6%;"><col style="width: 33.3%;"></colgroup>`;
+                        b.content.forEach((row, ri) => {
+                            html += `<tr>` + row.map((c, ci) => {
+                                const tag = ri === 0 ? 'th' : 'td';
+                                return `<${tag}>${this.isEditMode ? `<div contenteditable="true" class="focus:outline-none focus:bg-white/50 p-1 -m-1 rounded" oninput="app.updateTableCellSilent('${b.id}', ${ri}, ${ci}, this.innerHTML)">${c}</div>` : c}</${tag}>`;
+                            }).join('') + (this.isEditMode ? `<td class="w-10 border-none text-center"><button onclick="app.deleteTableRow('${b.id}', ${ri})" class="text-danger opacity-50 hover:opacity-100 hover:scale-125 transition-all">✕</button></td>` : '') + `</tr>`;
+                        });
+                        html += `</table>`;
+                        if(this.isEditMode) html += `<button class="recipe-btn recipe-btn-sm" onclick="app.addTableRow('${b.id}')">LIGNE</button>`;
+                    }
+                    html += `</div>`;
+                });
+                const sig = variant.signature || '';
+                if (this.isEditMode || sig) {
+                    html += `<div class="mt-16 text-right font-heading text-xl text-primary/80 italic border-t border-primary/10 pt-4 max-w-[350px] ml-auto pb-8"><span class="opacity-70">Recette proposée par</span><br>${this.isEditMode ? `<span contenteditable="true" onkeypress="if(event.key === 'Enter') event.preventDefault();" class="font-bold text-accent focus:outline-none border-b border-dashed border-accent/50 empty:before:content-['[Nom]'] inline-block min-w-[150px] mt-1" oninput="app.updateSignatureSilent(this.innerText)">${sig}</span>` : `<span class="font-bold text-accent text-2xl mt-1 inline-block">${sig}</span>`}</div>`;
+                }
+                html += `</div>`; main.innerHTML = html;
+            },
+
+            updateBlockSilent(id, val) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b) { b.content = val; if(b.type === 'TITLE') { const p = this.getActivePage(); p.title = val; const tab = this.state.tabs.find(t => t.pages.some(page => page.id === p.id)); if(tab) tab.pages.sort((a, b) => a.title.localeCompare(b.title, 'fr', {sensitivity: 'base'})); this.renderSidebar(); } } },
+            updatePresentationTextSilent(id, val) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b && b.type === 'PRESENTATION') b.content.text = val; },
+            updatePresentationInfoSilent(id, key, val) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b && b.type === 'PRESENTATION') { if (!b.content.infos) b.content.infos = {}; b.content.infos[key] = val.trim(); } },
+            updateSignatureSilent(val) { const v = this.getActiveVariant(); if(v) v.signature = val; },
+            updateTableCellSilent(id, ri, ci, val) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b) b.content[ri][ci] = val; },
+            updateZoom(id, val) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b && b.type === 'PRESENTATION') { b.content.imageZoom = val; const el = document.querySelector(`.block-wrapper[data-id="${id}"] .presentation-img-container`); if(el) el.style.backgroundSize = `${val}%`; } },
+
+            addTableRow(id) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b) { b.content.push(new Array(b.content[0].length).fill("")); this.renderMainContent(); } },
+            deleteTableRow(id, ri) { const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if(b && b.content.length > 1) { b.content.splice(ri, 1); this.renderMainContent(); } },
+            deleteBlock(id) { const v = this.getActiveVariant(); v.blocks = v.blocks.filter(x => x.id !== id); this.renderMainContent(); },
+            
+            enableBlockDrag(id) { const el = document.querySelector(`.block-wrapper[data-id="${id}"]`); if(el) el.setAttribute('draggable', 'true'); },
+            disableBlockDrag(id) { const el = document.querySelector(`.block-wrapper[data-id="${id}"]`); if(el) el.removeAttribute('draggable'); },
+            draggedBlockId: null,
+            dragStart(e, id) { if(!this.isEditMode) { e.preventDefault(); return; } this.draggedBlockId = id; setTimeout(() => { e.target.classList.add('opacity-50'); document.body.classList.add('is-dragging'); }, 0); },
+            dragOver(e) { e.preventDefault(); e.currentTarget.classList.add('block-drag-over'); },
+            dragLeave(e) { e.currentTarget.classList.remove('block-drag-over'); },
+            drop(e, targetId) { e.preventDefault(); e.currentTarget.classList.remove('block-drag-over'); if (this.draggedBlockId && this.draggedBlockId !== targetId) { const variant = this.getActiveVariant(); const from = variant.blocks.findIndex(b => b.id === this.draggedBlockId); const to = variant.blocks.findIndex(b => b.id === targetId); if(from > -1 && to > -1) { const [moved] = variant.blocks.splice(from, 1); variant.blocks.splice(to, 0, moved); this.renderMainContent(); } } },
+            dragEnd(e) { e.target.classList.remove('opacity-50'); document.body.classList.remove('is-dragging'); this.draggedBlockId = null; document.querySelectorAll('.block-wrapper').forEach(el => el.classList.remove('block-drag-over')); },
+
+            panState: { active: false, id: null, startX: 0, startY: 0, bgX: 50, bgY: 50, currentX: 50, currentY: 50, el: null },
+            startPan(e, id) { if (e.button !== 0 || !this.isEditMode) return; e.preventDefault(); const v = this.getActiveVariant(); const b = v.blocks.find(x => x.id === id); if (!b) return; const pos = b.content.imagePos || '50% 50%'; const [x, y] = pos.split(' ').map(val => parseFloat(val)); this.panState = { active: true, id: id, startX: e.clientX, startY: e.clientY, bgX: isNaN(x) ? 50 : x, bgY: isNaN(y) ? 50 : y, currentX: isNaN(x) ? 50 : x, currentY: isNaN(y) ? 50 : y, el: e.currentTarget }; document.body.classList.add('is-panning'); document.addEventListener('mousemove', this.doPanBinding); document.addEventListener('mouseup', this.endPanBinding); },
+            doPan(e) { if(!this.panState.active) return; const dx = e.clientX - this.panState.startX, dy = e.clientY - this.panState.startY; let newX = this.panState.bgX - (dx * 0.2), newY = this.panState.bgY - (dy * 0.2); newX = Math.max(0, Math.min(100, newX)); newY = Math.max(0, Math.min(100, newY)); this.panState.currentX = newX; this.panState.currentY = newY; this.panState.el.style.backgroundPosition = `${newX}% ${newY}%`; },
+            endPan(e) { if(!this.panState.active) return; this.panState.active = false; document.body.classList.remove('is-panning'); document.removeEventListener('mousemove', this.doPanBinding); document.removeEventListener('mouseup', this.endPanBinding); const b = this.getActiveVariant().blocks.find(x => x.id === this.panState.id); if (b && b.type === 'PRESENTATION') { b.content.imagePos = `${this.panState.currentX.toFixed(2)}% ${this.panState.currentY.toFixed(2)}%`; } },
+
+            triggerJSONLoad() { document.getElementById('json-input').click(); },
+            importJSON(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const importedState = JSON.parse(e.target.result);
+                        if (!importedState.tabs) throw new Error("Format invalide");
+                        this.state = importedState;
+                        this.migrateData();
+                        this.activeVariantIndex = 0;
+                        this.render();
+                        this.customAlert("Données importées !");
+                    } catch (err) {
+                        this.customAlert("Erreur JSON.");
+                    }
+                };
+                reader.readAsText(file);
+                event.target.value = '';
+            },
+            exportJSON() {
+                const dataStr = JSON.stringify(this.state, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `carnet_data_${new Date().toISOString().slice(0,10)}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+            },
+            customPrompt(title, def, cb) { const m = document.getElementById('custom-modal'), inp = document.getElementById('modal-input'); document.getElementById('modal-title').textContent = title; inp.value = def; inp.classList.remove('hidden'); document.getElementById('modal-confirm').onclick = () => { m.classList.add('hidden'); cb(inp.value); }; document.getElementById('modal-cancel').onclick = () => m.classList.add('hidden'); m.classList.remove('hidden'); },
+            customAlert(msg) { const m = document.getElementById('custom-modal'); document.getElementById('modal-title').textContent = "Système"; document.getElementById('modal-text').textContent = msg; document.getElementById('modal-text').classList.remove('hidden'); document.getElementById('modal-input').classList.add('hidden'); document.getElementById('modal-confirm').onclick = () => m.classList.add('hidden'); document.getElementById('modal-cancel').onclick = () => m.classList.add('hidden'); m.classList.remove('hidden'); },
+            compileAndDownload() { 
+                const wasInEditMode = this.isEditMode; 
+                this.isEditMode = false; 
+                this.render(); 
+                const htmlCode = "<!DOCTYPE html>\n" + document.documentElement.outerHTML; 
+                const a = document.createElement("a"); 
+                a.href = URL.createObjectURL(new Blob([htmlCode], {type: "text/html"})); 
+                a.download = 'carnet_recettes_final.html'; 
+                a.click(); 
+                this.isEditMode = wasInEditMode; 
+                this.render(); 
+            }
+        };
+        window.app = app;
+        window.addEventListener('DOMContentLoaded', () => app.init());
+    </script>
+
+</body></html>
